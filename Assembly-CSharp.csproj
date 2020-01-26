@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\GarbageCollector.cs" />
      <Compile Include="Assets\Scripts\NoteScript.cs" />
      <Compile Include="Assets\Scripts\PlayerData.cs" />
+     <None Include="Assets\Song_Data\Song01.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Eldrich_Kittens_01/Eldrich Kittens Prototype/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

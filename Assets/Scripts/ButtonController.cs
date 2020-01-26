@@ -18,6 +18,7 @@ public class ButtonController : MonoBehaviour
     {
         buttonSpriteRenderer = GetComponent<SpriteRenderer>();
         currentlyPressed = false;
+        multplier = 1f;
     }
 
     // Update is called once per frame

@@ -6,6 +6,7 @@ public class NoteScript : MonoBehaviour
 {
     private float noteScore; //the amount of points this note is worth
     public string ownedBy; //which player the note corresponds to.
+    public string currentButton; //which button the note corresponds to. (Equal to the name of the button for ease of access)s
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,7 @@ public class NoteScript : MonoBehaviour
          * the player did, like "Good!", "Great!", "Awesome!" etc.
          */
         float distance = transform.position.y - button.position.y;
-        return (int) Mathf.Abs(noteScore / distance);
+        return (float) Mathf.Ceil(Mathf.Abs(noteScore / distance) + 0.001f);
     }
     // Update is called once per frame
     void Update()

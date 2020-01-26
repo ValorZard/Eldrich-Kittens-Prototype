@@ -17,11 +17,11 @@ public class BeatScroller : MonoBehaviour
     public int beatRate; //beats per minute
     private List<GameObject> noteList;
     private float timeSinceLastBeatHit; //this is for spawning notes at a consistent rate
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.beatRate = 90;
         this.noteList = GetNotesInScene();
         this.timeSinceLastBeatHit = 0;
     }
@@ -44,6 +44,11 @@ public class BeatScroller : MonoBehaviour
         return (float) (beatRate / 60);
     }
 
+    private void SpawnNotes()
+    {
+        string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Public\TestFolder\WriteLines2.txt");
+    }
+
     private void MoveNotes(List<GameObject> noteList)
     {
         /*
@@ -63,6 +68,7 @@ public class BeatScroller : MonoBehaviour
         MoveNotes(this.noteList);
         timeSinceLastBeatHit += Time.deltaTime;
     }
+
 
     
 }
